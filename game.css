@@ -1,0 +1,173 @@
+html{
+    min-height:100%;
+    position:relative;
+}
+body{
+    height: 100%;
+    /*background-color: beige;*/
+}
+input{
+    text-align: center;
+    font-size: xx-large;
+    font-style: italic;
+    text-decoration: underline;
+    color: gray;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+}
+div#gameContainer{
+    background-color: beige;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    /*max-height: 1000px;*/
+    height: 100%;
+}
+ul.gameMenu{
+    z-index: 1;
+    position: absolute;
+    width: 20%;
+    left: 40%;
+}
+ul.gameMenu > li{
+    border: 2px solid gray;
+    border-radius: 12px;
+    padding: 5px;
+    text-align: center;
+    list-style-type: none;
+    margin: 2%;
+}
+ul.gameMenu > li:hover{
+    background-color: gray;
+    color: white;
+}
+.menuButton{
+    position: absolute;
+    width: 5%;
+    left: 4%;
+    border: 2px solid gray;
+    border-radius: 12px;
+    padding: 5px;
+    text-align: center;
+}
+.menuButton:hover{
+    background-color: gray;
+    color: white;
+}
+.hidden{
+    display: none;
+}
+.selector::-webkit-scrollbar {
+    display: none;
+}
+.selector {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}  
+.selector{
+    position: relative;
+    left: calc(50% - 325px);
+    top: 10%;
+    overflow-y: scroll;
+    width: 650px;
+    height: 80%;
+}
+.row{
+    display: flex;
+    flex-flow: row wrap;
+}
+.row > *{
+    flex: 0 0 300px;
+}
+.row > div{
+    flex: 1 1 100px;    
+}
+table.preview{
+    margin: auto;
+    table-layout: fixed;
+    width: 300px;
+    height: 300px;
+}
+table.preview:hover{
+    background-color: cadetblue;
+}
+
+table.preview > tr > td{
+    border: 2px solid gray;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    background-color: azure;
+    white-space: nowrap;
+}
+table.preview > tr > td.wall{
+    background-color: black;
+    color: white;
+}
+/*-----------------------------------*/
+div#gameContainer > table.board{
+    table-layout: fixed;
+    position: absolute;
+    border-collapse: separate;
+    border-spacing: 2px;
+    top: 20%;
+}
+table.board > tr > td{
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    background-color: azure;
+    font-size: 150%;
+    overflow: hidden;
+}
+table.board > tr > td.lit{
+    background-color: yellow;
+}
+table.board > tr > td.invalid{
+    color: red;
+}
+table.board > tr > td.valid{
+    color: lightgreen;
+}
+table.board > tr > .wall{
+    background-color: black;
+    border-color: black;
+    color: white;
+}
+/*-----------------------------------*/
+div#gameContainer > table.header{
+    position: absolute;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 4px;
+    top: 5%;
+    height: 30px;
+}
+table.board > tr > td.timer{
+    background-color: yellow;
+}
+caption > span{
+    display: inline;
+    max-width: 100;
+}
+caption > span > input{
+    border: 2px solid gray;
+    border-radius: 4px;
+}
+#editorToolBar{
+    min-width: 300px;
+    font-size: medium;
+}
+#editorToolBar > span > *{
+    display: inline;
+}
+#editorToolBar > *{
+    width: auto;
+}
